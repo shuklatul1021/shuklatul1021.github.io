@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50;
+  }
+}
+
+.prose {
+  @apply text-gray-900 leading-normal;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  @apply font-bold mb-4;
+}
+
+.prose p {
+  @apply mb-4;
+}
+
+.prose ul {
+  @apply list-disc list-inside mb-4;
+}
+
+.prose pre {
+  @apply bg-gray-100 p-2 rounded-md my-2;
+}
+
+@keyframes path-dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes node-pulse {
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.path-animation {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: path-dash 1.5s ease-in-out forwards;
+}
+
+.node-animation {
+  animation: node-pulse 2s ease-in-out infinite;
+}
+
+@keyframes subtle-pulse {
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: subtle-pulse 2s ease-in-out infinite;
+}
